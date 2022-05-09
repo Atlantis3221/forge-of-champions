@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation, Scrollbar } from "swiper";
+import { Scrollbar, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -10,23 +10,32 @@ const ImproveSwiper = () => {
     <GridContainer>
       <h1 className="col-span-6">Jopa</h1>
       <Swiper
-        modules={[Navigation, Scrollbar]}
+        modules={[Scrollbar, FreeMode]}
         spaceBetween={20}
-        slidesPerView={1}
-        // navigation
-        // scrollbar={{ draggable: true }}
+        freeMode
+        slidesPerView={1.5}
+        
+        
+        scrollbar={{ draggable: true }}
+        style={{display:"flex", width:"50vw", maxWidth:"50vw"}}
       >
-        <SwiperSlide>
-          <img src="/public/slide_1.png" alt="" />
-          <div>dsbfasbfjkafuyl1111</div>
+        <SwiperSlide style={{display:"flex", width:"28vw" }}>
+          <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%"}}>
+            <img src="/public/slide_1.png" alt="" className={`flex h-72 w-1/4`} />
+            <div>dsbfasbfjkafuyl1111</div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="/public/slide_1.png" alt="" />
-          <div>2222222222222222</div>
+        <SwiperSlide style={{display:"flex", width:"28vw"}}>
+        <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%"}}>
+            <img src="/public/slide_1.png" alt="" className={`flex h-72`} />
+            <div>22222222222222222222</div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="/public/slide_1.png" alt="" />
-          <div>3333333333333333</div>
+        <SwiperSlide style={{display:"flex", width:"28vw"}}>
+        <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%"}}>
+            <img src="/public/slide_1.png" alt="" className={`flex h-72`} />
+            <div>33333333333333333333</div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </GridContainer>

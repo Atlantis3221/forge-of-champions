@@ -4,6 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
 import ImproveSwiper from '../components/improveSwiper/improveSwiper';
+import Team from '../components/team';
 
 const Home: NextPage = () => {
 
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <ImproveSwiper />
+        <Team/>
       </Layout>
     </>
   )

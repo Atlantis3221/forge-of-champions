@@ -30,7 +30,7 @@ const ImproveSwiper = () => {
         style={{display:"flex", width:"50vw", maxWidth:"50vw"}}
       >
         {tiers.map((tier, i) => (
-          <SwiperSlide style={{ width:"28vw" }} className={`flex flex-col`}>
+          <SwiperSlide key={i} style={{ width:"28vw" }} className={`flex flex-col`}>
           <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%", height:"100%"}}>
             <img src={tier.img} alt="" style={{height:"400px"}}/>
           </div>

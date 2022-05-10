@@ -5,10 +5,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import GridContainer from "../wrapers/gridContainer";
 
+const tiers = [
+  { img: "/public/tier1.png", caption: "TIERS #1" , text: "10" },
+  { img: "/public/tier1.png", caption: "TIERS #2" , text: "100" },
+  { img: "/public/tier1.png", caption: "TIERS #3" , text: "1000" },
+]  
+  
 const ImproveSwiper = () => {
   return (
     <GridContainer>
-      <h1 className="col-span-6">Jopa</h1>
+      <div className="col-span-6 flex flex-col justify-center mr-8">
+      <h1 className="text-5xl flex justify-start">IMPROVE YOUR</h1>
+      <h1 className="text-5xl flex justify-end"> ABILITIES</h1>
+      <div className="flex justify-end">Players are the core of APEX ARENA. <br />They give their time and effort to grow in <br />the game and to advance their ranks</div>
+      </div>
       <Swiper
         modules={[Scrollbar, FreeMode]}
         spaceBetween={20}
@@ -19,24 +29,17 @@ const ImproveSwiper = () => {
         scrollbar={{ draggable: true }}
         style={{display:"flex", width:"50vw", maxWidth:"50vw"}}
       >
-        <SwiperSlide style={{display:"flex", width:"28vw" }}>
-          <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%"}}>
-            <img src="/public/slide_1.png" alt="" className={`flex h-72 w-1/4`} />
-            <div>dsbfasbfjkafuyl1111</div>
+        {tiers.map((tier, i) => (
+          <SwiperSlide style={{ width:"28vw" }} className={`flex flex-col`}>
+          <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%", height:"100%"}}>
+            <img src={tier.img} alt="" style={{height:"400px"}}/>
           </div>
+          <div className="my-4 leading-none">{tier.caption}</div>
+          <div className="leading-none">Play a minimum of {tier.text} <br /> battles In the Open Arena</div>
         </SwiperSlide>
-        <SwiperSlide style={{display:"flex", width:"28vw"}}>
-        <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%"}}>
-            <img src="/public/slide_1.png" alt="" className={`flex h-72`} />
-            <div>22222222222222222222</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide style={{display:"flex", width:"28vw"}}>
-        <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%"}}>
-            <img src="/public/slide_1.png" alt="" className={`flex h-72`} />
-            <div>33333333333333333333</div>
-          </div>
-        </SwiperSlide>
+        ))}
+        
+
       </Swiper>
     </GridContainer>
   );

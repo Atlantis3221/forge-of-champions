@@ -30,7 +30,7 @@ export default function Header() {
     <>
       <div
         id="header"
-        className={`flex justify-between sticky top-0 left-0 w-full z-50`}
+        className={`flex sticky top-0 left-0 w-full z-50`}
       >
         <div className={`flex`}>
           {links.map((item, index) => {

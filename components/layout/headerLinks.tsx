@@ -24,7 +24,7 @@ const HeaderLinks = ({ children, link, active, setIsShow, }: Props,) => {
                             router.push(`/#${link}`)
                             setIsShow((isShow: any) => !isShow)
                         }}
-                        className={`${active ? 'text-white' : 'text-neutral-500'} my-4 text-base leading-[105%] whitespace-pre-wrap font-gothic cursor-pointer`}>{children}</a>
+                        className={`${active ? 'text-white' : 'text-white'} my-4 leading-[105%] whitespace-pre-wrap cursor-pointer`}>{children}</a>
                 </div>
             </div>
         </>

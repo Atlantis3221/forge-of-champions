@@ -3,7 +3,7 @@ import { Scrollbar, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import GridContainer from "../wrapers/gridContainer";
+import GridContainer from "./wrapers/gridContainer";
 
 const tiers = [
   { img: "/img/tier1.png", caption: "TIERS #1" , text: "10", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },

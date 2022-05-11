@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide, } from "swiper/react";
 
 import "swiper/css";
@@ -15,13 +15,14 @@ const skins = [
 const Marketplace = () => {
   return (
     <GridContainer>
-      <div className="col-span-6 flex flex-col justify-center mr-8">
+      <div className="col-span-5 flex flex-col justify-center mr-8">
         <h1 className="text-5xl flex justify-start">MARKETPLACE</h1>
         <div className="flex text-xl justify-end uppercase">
           giving skills a chance
         </div>
         <div className="flex justify-end">None of our NFTs will enhance player <br /> performance in any way. But it makes <br />a lot of fun!</div>
       </div>
+     
       <Swiper
         spaceBetween={0}
         initialSlide={1}

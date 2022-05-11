@@ -3,9 +3,9 @@ import Layout from '../components/layout/layout'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
-import ImproveSwiper from '../components/improveSwiper/improveSwiper';
+import ImproveSwiper from '../components/improveSwiper';
 import Team from '../components/team';
-import Marketplace from '../components/marketPlace';
+import Marketplace from '../components/marketplace';
 
 const Home: NextPage = () => {
 

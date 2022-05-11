@@ -7,40 +7,45 @@ import GridContainer from "./wrapers/gridContainer";
 
 const team = [
   {
-    img: "/public/member1.png",
+    img: "/img/member1.png",
     caption: "MORGAN FREEMAN",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
   {
-    img: "/public/member1.png",
+    img: "/img/member1.png",
     caption: "DANIEL HANKS",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
   {
-    img: "/public/member1.png",
+    img: "/img/member1.png",
     caption: "XELA RAY",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
   {
-    img: "/public/member1.png",
+    img: "/img/member1.png",
     caption: "TIERS #3",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
   {
-    img: "/public/member1.png",
+    img: "/img/member1.png",
     caption: "TIERS #3",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
   {
-    img: "/public/member1.png",
+    img: "/img/member1.png",
     caption: "TIERS #3",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
+  {
+    img:"",
+    caption: "",
+    text:"",
+  }
 ];
 
 const Team = () => {
   return (
-    <GridContainer>
+    <GridContainer id="team">
       <div className="col-span-12 flex justify-between">
         <h1 className="text-5xl flex justify-start">MEET OUR PEOPLE</h1>
         <div className="flex justify-end">
@@ -65,7 +70,7 @@ const Team = () => {
       >
         {team.map((member, i) => (
           <SwiperSlide key={i} className={`flex flex-col`}>
-            <img src={member.img} alt="" />
+            <img src={member.img} alt="" className="w-1/2" />
             <div className="my-4 leading-none">{member.caption}</div>
             <div className="leading-none">{member.text}</div>
           </SwiperSlide>

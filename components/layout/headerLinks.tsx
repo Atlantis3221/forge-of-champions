@@ -14,7 +14,7 @@ const HeaderLinks = ({ children, link, active, setIsShow, }: Props,) => {
     // console.log(link)
     return (
         <>
-            <div className={`px-4 md:px-8 lg:px-16 w-full flex flex-col lg:items-center`}>
+            <div className={`px-6 w-full flex flex-col lg:items-center`}>
                 <div
                     className='flex items-center'
                 >
@@ -24,7 +24,7 @@ const HeaderLinks = ({ children, link, active, setIsShow, }: Props,) => {
                             router.push(`/#${link}`)
                             setIsShow((isShow: any) => !isShow)
                         }}
-                        className={`${active ? 'text-white' : 'text-white'} my-4 text-xl lg:text-35px leading-[105%] whitespace-pre-wrap font-gothic cursor-pointer`}>{children}</a>
+                        className={`${active ? 'text-white' : 'text-neutral-500'} my-4 text-base leading-[105%] whitespace-pre-wrap font-gothic cursor-pointer`}>{children}</a>
                 </div>
             </div>
         </>

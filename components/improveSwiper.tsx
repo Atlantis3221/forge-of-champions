@@ -3,12 +3,13 @@ import { Scrollbar, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import GridContainer from "../wrapers/gridContainer";
+import GridContainer from "./wrapers/gridContainer";
 
 const tiers = [
-  { img: "/public/tier1.png", caption: "TIERS #1" , text: "10" },
-  { img: "/public/tier1.png", caption: "TIERS #2" , text: "100" },
-  { img: "/public/tier1.png", caption: "TIERS #3" , text: "1000" },
+  { img: "/img/tier1.png", caption: "TIERS #1" , text: "10", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
+  { img: "/img/tier1.png", caption: "TIERS #2" , text: "100", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
+  { img: "/img/tier1.png", caption: "TIERS #3" , text: "1000", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
+  // { img: "" , caption:"" , text:"", bg:"none"},
 ]  
   
 const ImproveSwiper = () => {
@@ -23,16 +24,16 @@ const ImproveSwiper = () => {
         modules={[Scrollbar, FreeMode]}
         spaceBetween={20}
         freeMode
-        slidesPerView={1.5}
-        
-        
+        initialSlide={0.3}
+        slidesPerView={1.7}
+        centeredSlides        
         scrollbar={{ draggable: true }}
         style={{display:"flex", width:"50vw", maxWidth:"50vw"}}
       >
         {tiers.map((tier, i) => (
-          <SwiperSlide key={i} style={{ width:"28vw" }} className={`flex flex-col`}>
-          <div style={{background: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)", width:"100%", height:"100%"}}>
-            <img src={tier.img} alt="" style={{height:"400px"}}/>
+          <SwiperSlide key={i} style={{ width:"27vw" }} className={`flex flex-col`}>
+          <div style={{background:"" , width:"100%", height:"100%"}}>
+            <img src={tier.img} alt="" />
           </div>
           <div className="my-4 leading-none">{tier.caption}</div>
           <div className="leading-none">Play a minimum of {tier.text} <br /> battles In the Open Arena</div>

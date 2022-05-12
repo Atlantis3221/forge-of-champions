@@ -36,11 +36,6 @@ const team = [
     caption: "TIERS #3",
     text: "None of our NFTs will enhance player performance in any way. But it makes a lot of fun!",
   },
-  {
-    img:"",
-    caption: "",
-    text:"",
-  }
 ];
 
 const Team = () => {
@@ -58,6 +53,7 @@ const Team = () => {
         modules={[Scrollbar, FreeMode]}
         spaceBetween={114}
         freeMode
+        loop
         slidesPerView={3}
         scrollbar={{ draggable: true }}
 

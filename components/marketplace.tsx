@@ -1,20 +1,32 @@
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide, } from "swiper/react";
+import React, { useState } from "react";
 
-import "swiper/css";
 import GridContainer from "./wrapers/gridContainer";
 
 const skins = [
-  { img: "/img/skin1.png" },
-  { img: "/img/skin1.png" },
-  { img: "/img/skin1.png" },
-  { img: "/img/skin1.png" },
-  { img: "/img/skin1.png" },
+  { skin: "/img/skin1.png", nav: "/img/navigation2.png" },
+  { skin: "/img/skin2.png", nav: "/img/navigation2.png" },
+  { skin: "/img/skin3.png", nav: "/img/navigation2.png" },
+  { skin: "/img/skin4.png", nav: "/img/navigation2.png" },
+  { skin: "/img/skin5.png", nav: "/img/navigation2.png" },
 ];
 
 const Marketplace = () => {
+
+  const [isActive, setIsActive] = useState(false);
+  const [skinEl, setSkinEl] = useState(0);
+  const [skinImage, setSkinImage] = useState(skins[skinEl].skin);
+
+  const handleImageClick = () => {
+    if(skinEl===skins.length-1){
+      setSkinEl(0);
+    } else {
+      setSkinEl(skinEl+1);
+    }
+    setSkinImage(skins[skinEl].skin);
+  }
+
   return (
-    <GridContainer>
+    <GridContainer id="marketplace">
       <div className="col-span-5 flex flex-col justify-center mr-8">
         <h1 className="text-5xl flex justify-start">MARKETPLACE</h1>
         <div className="flex text-xl justify-end uppercase">
@@ -22,24 +34,16 @@ const Marketplace = () => {
         </div>
         <div className="flex justify-end">None of our NFTs will enhance player <br /> performance in any way. But it makes <br />a lot of fun!</div>
       </div>
-     
-      <Swiper
-        spaceBetween={0}
-        initialSlide={1}
-        slidesPerView={1}
-        style={{ display: "flex", width: "50vw", maxWidth: "50vw" }}
-      >
-        {skins.map((skin, i) => (
-          <SwiperSlide
-            key={i}
-            className={`flex flex-col`}
-          >
-            <div style={{ background: "", width: "100%", height: "100%" }}>
-              <img src={skin.img} alt="" />
-            </div>
-          </SwiperSlide>
+
+      <div className="col-span-6">
+        <img src={skinImage} onClick={handleImageClick}/>
+      </div>
+
+      <div className="flex flex-col justify-center">
+        {skins.map((item, i)=>(
+          <img src={item.nav} alt="" className="rounded-full mb-2" key={i} onClick={() => setSkinImage(item.skin)}/>
         ))}
-      </Swiper>
+      </div>
     </GridContainer>
   );
 };

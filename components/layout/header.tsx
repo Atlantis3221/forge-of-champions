@@ -22,7 +22,7 @@ export default function Header() {
     },
     {
       name: "MARKETPLACE",
-      link: "3",
+      link: "marketplace",
     },
     {
       name: "DAO",
@@ -99,10 +99,9 @@ useEffect(() => {
 })
 
   return (
-    <GridContainer>
       <div
         id="header"
-        className={`flex sticky justify-between top-0 left-0 w-screen z-50`}
+        className={`flex sticky justify-between top-0 left-0 w-full px-16 z-50`}
       >
         <div className={`flex items-center`}>
           {links.map((item, index) => {
@@ -122,6 +121,5 @@ useEffect(() => {
         <img className={`absolute left-1/2 -translate-x-1/2 top-3`} src={`/img/logo.svg`} alt={`logo`} />
         <button className={`flex items-center justify-end`} onMouseEnter={() => setIsActive(!isActive)} onMouseLeave={()=> setIsActive(!isActive)}>{isActive ? <img src="/img/playDemoActive.png" /> : <img src="/img/playDemoInactive.png"/>}</button>
       </div>
-    </GridContainer>
-  );
+    );
 }

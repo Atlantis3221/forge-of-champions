@@ -24,6 +24,7 @@ const ImproveSwiper = () => {
         modules={[Scrollbar, FreeMode]}
         spaceBetween={20}
         freeMode
+        loop
         initialSlide={0.3}
         slidesPerView={1.7}
         centeredSlides        

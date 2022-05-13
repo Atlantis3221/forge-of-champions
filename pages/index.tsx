@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import ImproveSwiper from '../components/improveSwiper';
 import Team from '../components/team';
 import Marketplace from '../components/marketplace';
+import Land from '../components/land';
 
 const Home: NextPage = () => {
 
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout>
+        <Land />
         <ImproveSwiper />
         <Marketplace/>
         <Team/>

@@ -53,7 +53,7 @@ const Land = () => {
             {lands.map((item, i) => (
               <div className="flex items-center">
                 <span
-                  className="uppercase text-4xl mx-4"
+                  className={`uppercase text-4xl mx-4`}
                   onClick={() => {
                     setCost(item.cost);
                     setArenaRoi(item.arenaRoi);

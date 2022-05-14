@@ -7,6 +7,7 @@ import ImproveSwiper from '../components/improveSwiper';
 import Team from '../components/team';
 import Marketplace from '../components/marketplace';
 import Land from '../components/land';
+import Intro from '../components/introVideo';
 
 const Home: NextPage = () => {
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout>
+        <Intro />
         <Land />
         <ImproveSwiper />
         <Marketplace/>

@@ -7,7 +7,7 @@ const lands = [
     cost: "3458",
     arenaRoi: "984",
     playerRoi: "34",
-    activeNum: 0,
+    vector: "/img/landLine.svg",
   },
   {
     name: "apexium",
@@ -15,7 +15,7 @@ const lands = [
     cost: "2158",
     arenaRoi: "427",
     playerRoi: "21",
-    activeNum: 1,
+    vector: "/img/landLine.svg",
   },
   {
     name: "salvus",
@@ -23,7 +23,7 @@ const lands = [
     cost: "988",
     arenaRoi: "234",
     playerRoi: "14",
-    activeNum: 2,
+    vector: "/img/landLine.svg",
   },
   {
     name: "desert",
@@ -31,7 +31,7 @@ const lands = [
     cost: "9782",
     arenaRoi: "1234",
     playerRoi: "89",
-    activeNum: 3,
+    vector: "",
   },
 ];
 
@@ -49,11 +49,11 @@ const Land = () => {
         style={{ backgroundImage: background }}
       >
         <div className="flex flex-col h-full items-center justify-center">
-          <div className="flex">
+          <div className="flex h-full">
             {lands.map((item, i) => (
-              <div className="flex">
+              <div className="flex items-center">
                 <span
-                  className="uppercase text-xl mx-4"
+                  className="uppercase text-4xl mx-4"
                   onClick={() => {
                     setCost(item.cost);
                     setArenaRoi(item.arenaRoi);
@@ -63,22 +63,23 @@ const Land = () => {
                 >
                   {item.name}
                 </span>
+                <img src={item.vector} alt=""/>
               </div>
             ))}
           </div>
-          <div className="flex justify-center items-end">
+          <div className="flex justify-around w-3/4 items-end mb-8">
             <div className="flex flex-col">
-              <div className="uppercase text-xl">{cost} K</div>
+              <div className="uppercase text-4xl">{cost} K</div>
               <div className="uppercase text opacity-50">land cost</div>
             </div>
 
             <div className="flex flex-col">
-              <div className="uppercase text-xl">{arenaRoi}%</div>
+              <div className="uppercase text-4xl">{arenaRoi}%</div>
               <div className="uppercase text opacity-50">roi from arena</div>
             </div>
 
             <div className="flex-flex-col">
-              <div className="uppercase text-xl">{playerRoi}%</div>
+              <div className="uppercase text-4xl">{playerRoi}%</div>
               <div className="uppercase text opacity-50">roi from player</div>
             </div>
           </div>

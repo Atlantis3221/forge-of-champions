@@ -8,6 +8,7 @@ import Team from '../components/team';
 import Marketplace from '../components/marketplace';
 import Land from '../components/land';
 import Intro from '../components/introVideo';
+import ChooseYourArena from '../components/chooseYourArena';
 
 const Home: NextPage = () => {
 
@@ -19,10 +20,11 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <Intro />
+        <ChooseYourArena />
         <Land />
         <ImproveSwiper />
-        <Marketplace/>
-        <Team/>
+        <Marketplace />
+        <Team />
       </Layout>
     </>
   )

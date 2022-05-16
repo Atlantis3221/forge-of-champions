@@ -34,3 +34,32 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.runningLine {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 100%;
+  -webkit-animation: marquee 10s infinite linear;
+  animation: marquee 10s infinite linear;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0)
+  }
+}

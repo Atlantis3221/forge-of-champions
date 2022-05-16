@@ -11,21 +11,23 @@ const ChooseYourArena = () => {
     const desertModal = useModal()
 
     return (
-        <GridContainer className="mb-32 overflow-hidden">
-            <VideoModal videoModal={schoolModal} />
-            <VideoModal videoModal={factoryModal} />
-            <VideoModal videoModal={desertModal} />
-            <div className="col-span-12 h-screen w-full">
-                <h1 className="text-28px lg:text-5xl flex justify-center uppercase mb-10 lg:mb-5">Choose your Arena</h1>
-                <div>
-                    <Map
-                        desertOnClick={() => { desertModal.open() }}
-                        schoolOnClick={() => { schoolModal.open() }}
-                        factoryOnClick={() => { factoryModal.open() }} />
+        <div className="relative">
+            <GridContainer className="mb-32 relative">
+                <VideoModal videoModal={schoolModal} />
+                <VideoModal videoModal={factoryModal} />
+                <VideoModal videoModal={desertModal} />
+                <div className="col-span-12 h-screen w-full">
+                    <h1 className="text-28px lg:text-5xl flex justify-center uppercase mb-10 lg:mb-5">Choose your Arena</h1>
+                    <div>
+                        <Map
+                            desertOnClick={() => { desertModal.open() }}
+                            schoolOnClick={() => { schoolModal.open() }}
+                            factoryOnClick={() => { factoryModal.open() }} />
+                    </div>
                 </div>
-            </div>
+            </GridContainer>
             <RunningLine />
-        </GridContainer>
+        </div>
     )
 }
 

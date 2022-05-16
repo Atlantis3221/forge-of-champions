@@ -8,7 +8,7 @@ export interface IMap {
 
 const Map = ({ desertOnClick, factoryOnClick, schoolOnClick }: IMap) => {
     return (
-        <div className="relative text-sm w-max ml-auto mr-auto">
+        <div className="relative z-40 text-sm w-max ml-auto mr-auto">
             <img src="/img/map.png" className="" alt="" />
             <div
                 onClick={desertOnClick}

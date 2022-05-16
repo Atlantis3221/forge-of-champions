@@ -32,71 +32,77 @@ export default function Header() {
 
   useEffect(() => {
     function onScrolling() {
-      var currentPosition = window.scrollY
-      setScrollTop(currentPosition <= 0 ? 0 : currentPosition)
+      var currentPosition = window.scrollY;
+      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
     }
-    onScrolling()
-    window.addEventListener('scroll', onScrolling)
-    return () => window.removeEventListener('scroll', onScrolling)
-  })
+    onScrolling();
+    window.addEventListener("scroll", onScrolling);
+    return () => window.removeEventListener("scroll", onScrolling);
+  });
   const scrollTo = (event: { target: { hash: string } }, hash: any) => {
-    if (!event.target.hash && !hash)
-      return
+    if (!event.target.hash && !hash) return;
 
-    const point: string = hash || event.target.hash.replace('#', '')
-    const target: HTMLElement | null = document.getElementById(point)
+    const point: string = hash || event.target.hash.replace("#", "");
+    const target: HTMLElement | null = document.getElementById(point);
 
-    if (target === null)
-      return
-    window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top - headerHeight + window.scrollY), behavior: 'smooth' })
-  }
+    if (target === null) return;
+    window.scrollTo({
+      top: Math.max(
+        0,
+        target.getBoundingClientRect().top - headerHeight + window.scrollY
+      ),
+      behavior: "smooth",
+    });
+  };
 
   const onScroll = useCallback((e: any) => {
     for (let detail of links) {
       //@ts-ignore
-      const elm: HTMLElement = document.getElementById(detail.link)
+      const elm: HTMLElement = document.getElementById(detail.link);
 
       if (elm) {
-        const top = elm.getBoundingClientRect().top
-        const beforeHeader = top <= (headerHeight + 50)
-        if (beforeHeader) continue
+        const top = elm.getBoundingClientRect().top;
+        const beforeHeader = top <= headerHeight + 50;
+        if (beforeHeader) continue;
 
-        const topBeforeCenterOfScreen = top <= window.innerHeight / 2
+        const topBeforeCenterOfScreen = top <= window.innerHeight / 2;
         if (topBeforeCenterOfScreen) {
-          setCurrentPoint(detail.link)
-          break
+          setCurrentPoint(detail.link);
+          break;
         }
         // console.log(beforeHeader)
       }
       // console.log(elm)
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    setHeaderHeight((document.getElementById('header')?.clientHeight as number))
-  }, [])
+    setHeaderHeight(document.getElementById("header")?.clientHeight as number);
+  }, []);
 
-  const preventDefault = (event: { preventDefault: () => void }) => { event.preventDefault() }
-
-  useEffect(() => {
-    window.onhashchange = preventDefault
-  }, [])
+  const preventDefault = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll)
+    window.onhashchange = preventDefault;
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
     return () => {
-      window.removeEventListener('scroll', onScroll)
-    }
-  })
+      window.removeEventListener("scroll", onScroll);
+    };
+  });
 
   useEffect(() => {
-    const body = document.body
+    const body = document.body;
     if (isShow) {
-      body.style.overflowY = "hidden"
+      body.style.overflowY = "hidden";
     } else {
-      body.style.overflowY = "visible"
+      body.style.overflowY = "visible";
     }
-  })
+  });
 
   return (
     <div
@@ -118,8 +124,22 @@ export default function Header() {
           );
         })}
       </div>
-      <img className={`absolute left-1/2 -translate-x-1/2 top-3`} src={`/img/logo.svg`} alt={`logo`} />
-      <button className={`flex items-center justify-end`} onMouseEnter={() => setIsActive(!isActive)} onMouseLeave={() => setIsActive(!isActive)}>{isActive ? <img src="/img/playDemoActive.png" /> : <img src="/img/playDemoInactive.png" />}</button>
+      <img
+        className={`absolute left-1/2 -translate-x-1/2 top-3`}
+        src={`/img/logo.svg`}
+        alt={`logo`}
+      />
+      <button
+        className={`flex items-center justify-end`}
+        onMouseEnter={() => setIsActive(!isActive)}
+        onMouseLeave={() => setIsActive(!isActive)}
+      >
+        {isActive ? (
+          <img src="/img/playDemoActive.png" />
+        ) : (
+          <img src="/img/playDemoInactive.png" />
+        )}
+      </button>
     </div>
   );
 }

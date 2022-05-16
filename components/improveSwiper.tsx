@@ -14,7 +14,7 @@ const tiers = [
   
 const ImproveSwiper = () => {
   return (
-    <GridContainer>
+    <GridContainer className="mb-32">
       <div className="col-span-6 flex flex-col justify-center mr-8">
       <h1 className="text-5xl flex justify-start">IMPROVE YOUR</h1>
       <h1 className="text-5xl flex justify-end"> ABILITIES</h1>

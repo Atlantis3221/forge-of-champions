@@ -48,7 +48,7 @@ const Team = () => {
           expert and problem solvers.
         </div>
       </div>
-      <div className="col-span-2"/>
+  
       <Swiper
         modules={[Scrollbar, FreeMode]}
         spaceBetween={114}
@@ -58,6 +58,7 @@ const Team = () => {
         scrollbar={{ draggable: true }}
 
         style={{
+          gridColumn: " 3 / 12",
           display: "flex",
           width: "83vw",
           maxWidth: "83vw",

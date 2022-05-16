@@ -43,9 +43,8 @@ const Land = () => {
   const [playerRoi, setPlayerRoi] = useState(lands[0].playerRoi);
 
   return (
-    <>
       <div
-        className={`flex w-full justify-center h-screen bg-cover`}
+        className={`flex w-full justify-center h-screen bg-cover mb-32`}
         style={{ backgroundImage: background }}
       >
         <div className="flex flex-col h-full items-center justify-center">
@@ -53,7 +52,7 @@ const Land = () => {
             {lands.map((item, i) => (
               <div className="flex items-center">
                 <span
-                  className={`uppercase text-4xl mx-4`}
+                  className={`uppercase cursor-pointer text-4xl mx-4`}
                   onClick={() => {
                     setCost(item.cost);
                     setArenaRoi(item.arenaRoi);
@@ -85,7 +84,7 @@ const Land = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

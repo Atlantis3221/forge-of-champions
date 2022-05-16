@@ -10,6 +10,9 @@ module.exports = {
         "border": "#EAEAEA",
         "line": "#3D3D3D",
       },
+      fontFamily: {
+        helvetica: "Helvetica Neue Cyr",
+      },
       maxWidth: {
         mobile: "375px",
         "8xl": "1440px",

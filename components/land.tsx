@@ -37,7 +37,7 @@ const lands = [
 
 const Land = () => {
   const [background, setBackground] = useState(lands[0].background);
-  const [active, setActive] = useState(true);
+  const [activeTitle, setActiveTitle] = useState(lands[0].name);
   const [cost, setCost] = useState(lands[0].cost);
   const [arenaRoi, setArenaRoi] = useState(lands[0].arenaRoi);
   const [playerRoi, setPlayerRoi] = useState(lands[0].playerRoi);
@@ -52,12 +52,13 @@ const Land = () => {
             {lands.map((item, i) => (
               <div className="flex items-center">
                 <span
-                  className={`uppercase cursor-pointer text-4xl mx-4`}
+                  className={`uppercase cursor-pointer text-4xl mx-4 ${activeTitle === item.name ? '' : 'opacity-50'}`}
                   onClick={() => {
                     setCost(item.cost);
                     setArenaRoi(item.arenaRoi);
                     setPlayerRoi(item.playerRoi);
                     setBackground(item.background);
+                    setActiveTitle(item.name);
                   }}
                 >
                   {item.name}

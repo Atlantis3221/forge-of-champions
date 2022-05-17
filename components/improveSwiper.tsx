@@ -7,8 +7,8 @@ import GridContainer from "./wrapers/gridContainer";
 
 const tiers = [
   { img: "/img/tier1.png", caption: "TIERS #1" , text: "10", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
-  { img: "/img/tier1.png", caption: "TIERS #2" , text: "100", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
-  { img: "/img/tier1.png", caption: "TIERS #3" , text: "1000", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
+  { img: "/img/tier2.png", caption: "TIERS #2" , text: "100", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
+  { img: "/img/tier3.png", caption: "TIERS #3" , text: "1000", bg: "linear-gradient(170.44deg, #790A10 10.67%, rgba(72, 7, 103, 0) 92.79%)" },
   // { img: "" , caption:"" , text:"", bg:"none"},
 ]  
   

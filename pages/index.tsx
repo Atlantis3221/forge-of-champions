@@ -10,6 +10,7 @@ import Land from '../components/land';
 import ChooseYourArena from '../components/chooseYourArena';
 import BuyLand from '../components/buyLand';
 import Intro from '../components/introVideo';
+import Explore from '../components/explore';
 
 const Home: NextPage = () => {
 
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <Intro />
+        <Explore />
         <ChooseYourArena />
         <BuyLand />
         <Land />

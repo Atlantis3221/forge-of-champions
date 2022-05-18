@@ -12,7 +12,7 @@ const Explore = () => {
         <GridContainer className="mb-32 relative">
             <div className="absolute left-16 flex flex-col w-1/2 uppercase text-5xl justify-start">explore the variety<h1 className="flex justify-end">of ways to play</h1> </div>
             {explore.map((item, i) => (
-                <div className="flex flex-col justify-end col-span-4">
+                <div className="flex flex-col justify-end col-span-4" key={i}>
                     <img src={item.img} alt="" className="mb-9"/>
                     <h3 className="text-2xl uppercase mb-4">{item.caption}</h3>
                     <div className="opacity-50 mb-5">{item.text}</div>

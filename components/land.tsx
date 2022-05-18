@@ -50,7 +50,7 @@ const Land = () => {
         <div className="flex flex-col h-full items-center justify-center">
           <div className="flex h-full">
             {lands.map((item, i) => (
-              <div className="flex items-center">
+              <div key={i} className="flex items-center">
                 <span
                   className={`uppercase cursor-pointer text-4xl mx-4 ${activeTitle === item.name ? '' : 'opacity-50'}`}
                   onClick={() => {

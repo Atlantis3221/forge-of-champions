@@ -1,4 +1,4 @@
-import ModalLayout from "../layout/ModalLayout";
+import ModalLayout from "../layout/modalLayout";
 
 export interface IConfirmTransaction {
     videoModal: any;

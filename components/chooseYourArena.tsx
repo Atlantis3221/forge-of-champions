@@ -1,5 +1,5 @@
 import React from "react";
-import { useModal } from "./layout/ModalLayout";
+import { useModal } from "./layout/modalLayout";
 import Map from "./UI/map";
 import RunningLine from "./UI/runningLine";
 import VideoModal from "./UI/videoModal";

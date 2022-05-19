@@ -14,11 +14,11 @@ export default function Header() {
   const links = [
     {
       name: "BATTLE ROYALE",
-      link: "1",
+      link: "battleroyal",
     },
     {
       name: "LANDS",
-      link: "2",
+      link: "land",
     },
     {
       name: "MARKETPLACE",
@@ -39,6 +39,7 @@ export default function Header() {
     window.addEventListener("scroll", onScrolling);
     return () => window.removeEventListener("scroll", onScrolling);
   });
+  
   const scrollTo = (event: { target: { hash: string } }, hash: any) => {
     if (!event.target.hash && !hash) return;
 
@@ -107,14 +108,14 @@ export default function Header() {
   return (
     <div
       id="header"
-      className={`flex sticky justify-between top-0 left-0 w-full px-16 z-50`}
+      className={`flex sticky bg-[#131313] justify-between top-0 left-0 w-full px-16 z-50`}
     >
       <div className={`flex items-center`}>
         {links.map((item, index) => {
           return (
             <HeaderLinks
               key={index}
-              // {...{ setCurrentPoint, scrollTo }}
+              {...{ setCurrentPoint, scrollTo }}
               active={item.link === currentPoint}
               {...{ setIsShow }}
               link={item.link}

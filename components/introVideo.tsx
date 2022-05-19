@@ -6,7 +6,7 @@ const Intro = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <GridContainer>
+    <GridContainer className="mt-16">
       <div
         className="col-span-12 flex flex-col h-screen w-full"
       >

@@ -11,7 +11,7 @@ const ChooseYourArena = () => {
     const desertModal = useModal()
 
     return (
-        <div className="relative">
+        <div className="relative" id="battleroyal">
             <GridContainer className="mb-32 relative">
                 <VideoModal videoModal={schoolModal} />
                 <VideoModal videoModal={factoryModal} />

@@ -25,7 +25,7 @@ const Marketplace = () => {
   };
 
   return (
-    <GridContainer id="marketplace" className="mb-32">
+    <GridContainer className="mb-32">
       <div className="col-span-5 flex flex-col justify-center mr-8">
         <h1 className="text-5xl flex justify-start">MARKETPLACE</h1>
         <div className="flex text-xl justify-end uppercase">
@@ -37,9 +37,9 @@ const Marketplace = () => {
         </div>
       </div>
 
-      <div className="col-span-6">
+      <div className="col-span-6"  id="marketplace">
         <div className="relative w-fit">
-        <img src={skinImage} />
+        <img src={skinImage} alt=""/>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col uppercase items-center">
           <div
             onClick={handleImageClick}

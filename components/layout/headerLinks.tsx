@@ -22,7 +22,7 @@ const HeaderLinks = ({ children, link, active, setIsShow, }: Props,) => {
                         onClick={(e) => {
                             e.preventDefault()
                             router.push(`/#${link}`)
-                            setIsShow((isShow: any) => !isShow)
+                            // setIsShow((isShow: any) => !isShow)
                         }}
                         className={`${active ? 'text-white' : 'text-white'} my-9 leading-[105%] whitespace-nowrap cursor-pointer`}>{children}</a>
                 </div>

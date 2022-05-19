@@ -46,13 +46,14 @@ const Land = () => {
       <div
         className={`flex w-full justify-center h-screen bg-cover mb-32`}
         style={{ backgroundImage: background }}
+        id="land"
       >
         <div className="flex flex-col h-full items-center justify-center">
           <div className="flex h-full">
             {lands.map((item, i) => (
               <div key={i} className="flex items-center">
                 <span
-                  className={`uppercase cursor-pointer text-4xl mx-4 ${activeTitle === item.name ? '' : 'opacity-50'}`}
+                  className={`uppercase cursor-pointer text-4xl mx-4 ${activeTitle === item.name ? '' : 'opacity-50'} hover:opacity-100`}
                   onClick={() => {
                     setCost(item.cost);
                     setArenaRoi(item.arenaRoi);
